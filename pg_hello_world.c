@@ -38,6 +38,11 @@ void _PG_init(void)
     // Reset our global shared memory pointer
     hwss = NULL;
 
+    // TODO: This _MUST_ run. But it fails because I can't
+    // adding this to postgresql.conf stops it from starting:
+    //     shared_preload_libraries = '$libdir/pg_hello_world'
+    //
+    // But this needs to work!
     /* if (!process_shared_preload_libraries_in_progress) { */
     /*     ereport(ERROR, */
     /*             (errcode(ERRCODE_OBJECT_NOT_IN_PREREQUISITE_STATE), */
