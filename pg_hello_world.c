@@ -4,8 +4,6 @@
 #include "funcapi.h"
 #include "miscadmin.h"
 
-#include "pg_hello_world.h"
-
 #define BUF_SIZE 1024
 
 // The structure which we will share between processes
@@ -32,6 +30,7 @@ Datum hello_world_shared_memory(PG_FUNCTION_ARGS)
 }
 
 // The init hook for this extension
+void _PG_init(void);
 void _PG_init(void)
 {
     bool found;
