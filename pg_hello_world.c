@@ -19,14 +19,14 @@ static helloWorldSharedState *hwss = NULL;
 
 PG_MODULE_MAGIC;
 
-PG_FUNCTION_INFO_V1(hello_world);
-Datum hello_world(PG_FUNCTION_ARGS)
+PG_FUNCTION_INFO_V1(HW_hello_world);
+Datum HW_hello_world(PG_FUNCTION_ARGS)
 {
     PG_RETURN_TEXT_P(cstring_to_text("Hello World!"));
 }
 
-PG_FUNCTION_INFO_V1(hello_world_shared_memory);
-Datum hello_world_shared_memory(PG_FUNCTION_ARGS)
+PG_FUNCTION_INFO_V1(HW_hello_world_shared_memory);
+Datum HW_hello_world_shared_memory(PG_FUNCTION_ARGS)
 {
     PG_RETURN_TEXT_P(cstring_to_text(hwss->buffer));
 }

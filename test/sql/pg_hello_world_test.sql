@@ -1,3 +1,3 @@
 CREATE EXTENSION pg_hello_world;
-SELECT hello_world();
-SELECT hello_world_shared_memory();
+SELECT HW_hello_world();
+SELECT HW_hello_world_shared_memory();
