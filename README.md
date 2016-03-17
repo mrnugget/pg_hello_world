@@ -1,5 +1,9 @@
 ## pg_hello_world - An example PostgreSQL extension written in C
 
+**DISCLAIMER: DO NOT USE THIS IN PRODUCTION! This is just a playground for
+myself and contains a huge bug, because the extension is not loadable with the
+`shared_preload_libraries` option in the PostgreSQL configuration.**
+
 This extension defines two functions:
 
 * `HW_hello_world()`
